@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Feeders Only on</title><link>https://john-d-fly.github.io/website/docs/feeders-only/</link><description>Recent content in Feeders Only on</description><generator>Hugo</generator><language>en</language><atom:link href="https://john-d-fly.github.io/website/docs/feeders-only/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction</title><link>https://john-d-fly.github.io/website/docs/feeders-only/introduction/</link><pubDate>Tue, 27 Jun 2023 22:26:11 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/feeders-only/introduction/</guid><description>&lt;p>You now have access to the following features:&lt;/p>
+&lt;h2 id="mlat-sync-mapmlat-map">&lt;a href="../mlat-map">MLAT Sync Map&lt;/a>
+ &lt;a href="#mlat-sync-mapmlat-map" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;h2 id="my-mapmy-map">&lt;a href="../my-map">My Map&lt;/a>
+ &lt;a href="#my-mapmy-map" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;h2 id="re-apire-api">&lt;a href="../re-api">re-api&lt;/a>
+ &lt;a href="#re-apire-api" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;h2 id="beast--mlat-outputsbeast-mlat-out">&lt;a href="../beast-mlat-out">BEAST + MLAT Outputs&lt;/a>
+ &lt;a href="#beast--mlat-outputsbeast-mlat-out" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2></description></item><item><title>MLAT Map</title><link>https://john-d-fly.github.io/website/docs/feeders-only/mlat-map/</link><pubDate>Tue, 27 Jun 2023 22:25:19 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/feeders-only/mlat-map/</guid><description>&lt;p>You can see the feeders you are connected with, and other useful information.&lt;/p>
+&lt;p>&lt;a href="https://mlat.adsb.lol" target="_blank" rel="noopener">https://mlat.adsb.lol&lt;/a>
+&lt;/p>
+&lt;p>Please note that this map respects the privacy flag used by feeders. So any site that feeds with privacy enabled will not be shown on this map.&lt;/p>
+&lt;p>It was made by &lt;a href="https://github.com/wiedehopf/mlat-server-sync-map/commit/cc5e0bc33941296f730361e97b6055e7c104998a" target="_blank" rel="noopener">lemonodor and wiedehopf&lt;/a>
+&lt;/p></description></item><item><title>My Map</title><link>https://john-d-fly.github.io/website/docs/feeders-only/my-map/</link><pubDate>Tue, 27 Jun 2023 22:25:19 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/feeders-only/my-map/</guid><description>&lt;p>Your map is available at the following address: &lt;a href="https://my.adsb.lol" target="_blank" rel="noopener">https://my.adsb.lol&lt;/a>
+&lt;/p>
+&lt;p>This link, accessed by your IP, redirects you to your own subdomain that can be shared with others publicly.&lt;/p>
+&lt;p>Your location is always approximate, and can be off by several hundreds kilometers.&lt;/p>
+&lt;p>Please note that because of an implementation detail (subject to change), this functionality may fail if you have multiple feeders coming from the same IP address. When combining the &lt;a href="https://github.com/zacharyvoase/humanhash" target="_blank" rel="noopener">human hashes&lt;/a>
+ for each of the feeders, the resulting domain name may exceed the length limitation of the DNS lookup.&lt;/p></description></item><item><title>BEAST MLAT Out</title><link>https://john-d-fly.github.io/website/docs/feeders-only/beast-mlat-out/</link><pubDate>Tue, 27 Jun 2023 22:25:19 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/feeders-only/beast-mlat-out/</guid><description>&lt;p>License: &lt;a href="https://opendatacommons.org/licenses/odbl/1.0/" target="_blank" rel="noopener">ODbL 1.0&lt;/a>
+&lt;/p>
+&lt;p>Hostname: &lt;code>out.adsb.lol&lt;/code>&lt;/p>
+&lt;p>Port: 1337 (BEAST) and 1338 (MLAT, SBS)&lt;/p>
+&lt;p>These outputs are available to all feeders IPs.&lt;/p>
+&lt;h3 id="disclaimer">DISCLAIMER &lt;a href="#disclaimer" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>Do not use your feeder for this. &lt;strong>You need to spin up a new readsb.&lt;/strong>&lt;/p>
+&lt;p>This feature is experimental. In particular, &lt;strong>No support or guarantee of any kind is provided.&lt;/strong>&lt;/p>
+&lt;p>Documentation assumes a high skill level. &lt;strong>Please consider improving the documentation for the next person.&lt;/strong>&lt;/p>
+&lt;h3 id="usage">Usage &lt;a href="#usage" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>You can use readsb to get the data locally, for example running directly:&lt;/p></description></item><item><title>re-api</title><link>https://john-d-fly.github.io/website/docs/feeders-only/re-api/</link><pubDate>Tue, 27 Jun 2023 22:25:19 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/feeders-only/re-api/</guid><description>&lt;p>License: &lt;a href="https://opendatacommons.org/licenses/odbl/1.0/" target="_blank" rel="noopener">ODbL 1.0&lt;/a>
+&lt;/p>
+&lt;p>You can access the API at the following address: &lt;a href="https://re-api.adsb.lol" target="_blank" rel="noopener">https://re-api.adsb.lol&lt;/a>
+&lt;/p>
+&lt;p>This is the readsb API of our entire network, unfiltered and unmodified.&lt;/p>
+&lt;p>It is only accessible by your station&amp;rsquo;s IP address, so if you want to access it from another location, you will need to use a VPN, or a proxy.&lt;/p>
+&lt;h3 id="usage">Usage &lt;a href="#usage" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>See &lt;a href="https://github.com/wiedehopf/readsb/blob/dev/README-json.md#--net-api-port-query-formats" target="_blank" rel="noopener">docs&lt;/a>
+&lt;/p>
+&lt;p>For example,&lt;/p>
+&lt;p>&lt;a href="https://re-api.adsb.lol?circle=52,2,200" target="_blank" rel="noopener">https://re-api.adsb.lol?circle=52,2,200&lt;/a>
+&lt;/p></description></item></channel></rss>

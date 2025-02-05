@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Feed on</title><link>https://john-d-fly.github.io/website/docs/get-started/</link><description>Recent content in Feed on</description><generator>Hugo</generator><language>en</language><atom:link href="https://john-d-fly.github.io/website/docs/get-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Feeding</title><link>https://john-d-fly.github.io/website/docs/get-started/introduction/</link><pubDate>Tue, 27 Jun 2023 22:25:19 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/get-started/introduction/</guid><description>&lt;h2 id="feed-adsblol">Feed ADSB.lol &lt;a href="#feed-adsblol" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>Adding a receiver to our network is easy. You can use any of the following methods:&lt;/p>
+&lt;h3 id="adsbim-imagehttpsadsbimhowto">&lt;a href="https://adsb.im/howto" target="_blank" rel="noopener">ADSB.im Image&lt;/a>
+ &lt;a href="#adsbim-imagehttpsadsbimhowto" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>Easy: recommended for new stations running on dedicated hardware / Single Board Computers (SBCs).&lt;/p>
+&lt;p>Simple to use ADSB Feeder Images for common Single Board Computers like most of the Raspberry Pi family and many others. Web UI driven. Very limited technical skill required.&lt;/p>
+&lt;h3 id="adsblol-docker-toolkitdocker">&lt;a href="../docker">ADSB.lol Docker Toolkit&lt;/a>
+ &lt;a href="#adsblol-docker-toolkitdocker" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>For technically versed users: recommended for new stations that won&amp;rsquo;t be running on a dedicated SBC.&lt;/p></description></item><item><title>ADSB.im</title><link>https://john-d-fly.github.io/website/docs/get-started/adsb-image/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://john-d-fly.github.io/website/docs/get-started/adsb-image/</guid><description>&lt;p>This image is made and maintained by &lt;a href="https://github.com/dirkhh/adsb-feeder-image" target="_blank" rel="noopener">dirkhh&lt;/a>
+ with contributions from &lt;a href="https://github.com/katlol" target="_blank" rel="noopener">myself&lt;/a>
+.&lt;/p>
+&lt;p>Please follow the &lt;a href="https://adsb.im/howto" target="_blank" rel="noopener">detailed instructions&lt;/a>
+ on the ADSB.im website.&lt;/p></description></item><item><title>Docker Toolkit</title><link>https://john-d-fly.github.io/website/docs/get-started/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://john-d-fly.github.io/website/docs/get-started/docker/</guid><description>&lt;p>By default, it feeds MLAT+ADSB to adsb.lol. You can enable UAT/ACARS/VDL2, and feed to your plane data to FlightRadar24, Radarbox, Piaware, &lt;a href="https://github.com/adsblol/feed/blob/main/.env.example" target="_blank" rel="noopener">and more&lt;/a>
+&lt;/p>
+&lt;p>It is designed to be run on a Raspberry Pi, but can be run on any Linux Debian-like system.&lt;/p>
+&lt;p>With &lt;a href="#feeding-directly-to-other-aggregators">a few commands&lt;/a>
+, you can easily feed to other community aggregators.&lt;/p>
+&lt;h2 id="quick-start-with-docker">Quick Start with Docker &lt;a href="#quick-start-with-docker" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>To get started with the docker client,&lt;/p>
+&lt;p>Run this &lt;strong>as root&lt;/strong> on a fresh install of Raspberry Pi OS Lite or similar.&lt;/p></description></item><item><title>Bare Metal</title><link>https://john-d-fly.github.io/website/docs/get-started/bare-metal/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://john-d-fly.github.io/website/docs/get-started/bare-metal/</guid><description>&lt;ul>
+&lt;li>These scripts aid in setting up your current ADS-B receiver to feed &lt;a href="https://adsb.lol" target="_blank" rel="noopener">adsb.lol&lt;/a>
+&lt;/li>
+&lt;li>They will not disrupt any existing feed clients already present&lt;/li>
+&lt;/ul>
+&lt;h2 id="1-find-coordinates--elevation">1: Find coordinates / elevation: &lt;a href="#1-find-coordinates--elevation" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>&lt;a href="https://www.freemaptools.com/elevation-finder.htm" target="_blank" rel="noopener">https://www.freemaptools.com/elevation-finder.htm&lt;/a>
+&lt;/p>
+&lt;h2 id="2-install-the-adsblol-feed-client">2: Install the adsblol feed client &lt;a href="#2-install-the-adsblol-feed-client" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;pre>&lt;code>curl -L -o /tmp/lol-feed.sh https://adsb.lol/feed.sh
+sudo bash /tmp/lol-feed.sh
+&lt;/code>&lt;/pre>
+&lt;h2 id="3-check-if-your-feed-is-working">3: Check if your feed is working &lt;a href="#3-check-if-your-feed-is-working" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>That one&amp;rsquo;s easy! Just go to &lt;a href="https://adsb.lol" target="_blank" rel="noopener">https://adsb.lol&lt;/a>
+ and you should show as feeding.&lt;/p>
+&lt;h3 id="optional-local-interface-for-your-data-http192168xxxadsblol">Optional: local interface for your data http://192.168.X.XX/adsblol &lt;a href="#optional-local-interface-for-your-data-http192168xxxadsblol" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>Install / Update:&lt;/p></description></item></channel></rss>
