@@ -1,4 +1,4 @@
-baseurl = "https://www.nofly.io"
+baseurl = "https://john-d-fly.github.io/website/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
