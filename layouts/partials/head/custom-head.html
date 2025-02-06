@@ -1,1 +1,3 @@
 <!-- Custom head -->
+{{ $decentraflyJS := resources.Get "js/decentrafly.js" | js.Build | minify -}}
+<script defer>{{ $decentraflyJS.Content | safeJS }}</script>
