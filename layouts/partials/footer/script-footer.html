@@ -13,10 +13,10 @@
 {{ $mermaid := resources.Get "js/mermaid.js" | js.Build -}}
 
 {{ $app := resources.Get "js/app.js" -}}
-{{ $adsblol := resources.Get "js/adsblol.js" -}}
+{{ $decentrafly := resources.Get "js/decentrafly.js" -}}
 
 {{ $slice := slice $app -}}
-{{ $slice = $slice | append $adsblol }}
+{{ $slice = $slice | append $decentrafly }}
 
 {{ if .Site.Params.options.lazySizes -}}
 {{ $lazySizes := resources.Get "js/lazysizes.js" -}}
@@ -77,7 +77,7 @@
 {{ $js := $slice | resources.Concat "main.js" -}}
 
 {{ if eq (hugo.Environment) "development" -}}
-<script src="{{ $adsblol.RelPermalink}}" defer></script>
+<script src="{{ $decentrafly.RelPermalink}}" defer></script>
 {{ if .Site.Params.options.bootStrapJs -}}
 <script src="{{ $bs.RelPermalink }}" defer></script>
 {{ end -}}
@@ -97,8 +97,8 @@
 {{ end -}}
 {{ else -}}
 {{ $js := $js | minify | fingerprint "sha512" -}}
-{{ $adsblol := $adsblol | minify | fingerprint "sha512" -}}
-<script src="{{ $adsblol.RelPermalink}}" integrity="{{ $adsblol.Data.Integrity }}" crossorigin="anonymous"
+{{ $decentrafly := $decentrafly | minify | fingerprint "sha512" -}}
+<script src="{{ $decentrafly.RelPermalink}}" integrity="{{ $decentrafly.Data.Integrity }}" crossorigin="anonymous"
   defer></script>
 {{ $index := $index | minify | fingerprint "sha512" -}}
 {{ $bs := $bs | minify | fingerprint "sha512" -}}
@@ -137,7 +137,7 @@
     height: auto;
   }
 
-  .adsblol_blink {
+  .decentrafly_blink {
     animation: blink 1s ease-out;
   }
 
