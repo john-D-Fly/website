@@ -41,6 +41,8 @@
 {{ if $showFlexSearch -}}
 {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.bundle.js" -}}
 {{ $slice = $slice | append $flexSearch -}}
+{{ $search := resources.Get "js/search.js" | js.Build -}}
+{{ $slice = $slice | append $search -}}
 {{ if and (isset .Site.Params.options "searchsectionsshow") (not (eq .Site.Params.options.searchSectionsShow "ALL")) -}}
 {{ $showFlexSearch = or (eq (len .Site.Params.options.searchSectionsShow) 0) (in .Site.Params.options.searchSectionsShow
 .Section) (and .IsHome (in .Site.Params.options.searchSectionsShow "HomePage")) -}}
