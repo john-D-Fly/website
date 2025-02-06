@@ -1,0 +1,104 @@
+var suggestions=document.getElementById("suggestions"),search=document.getElementById("search");search!==null&&document.addEventListener("keydown",inputFocus);function inputFocus(e){e.ctrlKey&&e.key==="/"&&(e.preventDefault(),search.focus()),e.key==="Escape"&&(search.blur(),suggestions.classList.add("d-none"))}document.addEventListener("click",function(e){var t=suggestions.contains(e.target);t||suggestions.classList.add("d-none")}),document.addEventListener("keydown",suggestionFocus);function suggestionFocus(e){const s=suggestions.classList.contains("d-none");if(s)return;const t=[...suggestions.querySelectorAll("a")];if(t.length===0)return;const n=t.indexOf(document.activeElement);if(e.key==="ArrowUp"){e.preventDefault();const s=n>0?n-1:0;t[s].focus()}else if(e.key==="ArrowDown"){e.preventDefault();const s=n+1<t.length?n+1:n;t[s].focus()}}(function(){var e=new FlexSearch.Document({tokenize:"forward",cache:100,document:{id:"id",store:["href","title","description"],index:["title","description","content"]}});e.add({id:0,href:"/website/docs/overview/introduction/",title:"Introduction",description:"Decentrafly.org is a flight tracking network that aggregates data from volunteer feeders around the world.",content:`Get started # Feed Decentrafly.org # Instructions on how to get started sharing your station&rsquo;s data.
+Feeders Only # Resources that are available to you once you share data.
+Open Data # historical open data, available to everyone
+`}),e.add({id:1,href:"/website/docs/open-data/historical/",title:"Historical data",description:"License: ODbL 1.0",content:`Historical data is dumped daily by:
+readsb-prod-0 readsb-prod-1 readsb-staging-0 https://github.com/decentrafly/globe_history The data is made available by GitHub releases, a release is available daily for each of the above instances.
+Usage # The data contains a file per aircraft, a JSON GZIP file containing the data for that aircraft for the day.
+`}),e.add({id:2,href:"/website/docs/open-data/api/",title:"API",description:"License: ODbL 1.0",content:`The API is available to everyone.
+Usage # https://api.decentrafly.org `}),e.add({id:3,href:"/website/docs/get-started/introduction/",title:"Feeding",description:`Feed ADSB.lol # Adding a receiver to our network is easy. You can use any of the following methods:
+ADSB.im Image # Easy: recommended for new stations running on dedicated hardware / Single Board Computers (SBCs).
+Simple to use ADSB Feeder Images for common Single Board Computers like most of the Raspberry Pi family and many others. Web UI driven. Very limited technical skill required.
+ADSB.lol Docker Toolkit # For technically versed users: recommended for new stations that won&rsquo;t be running on a dedicated SBC.
+`,content:`Feed ADSB.lol # Adding a receiver to our network is easy. You can use any of the following methods:
+ADSB.im Image # Easy: recommended for new stations running on dedicated hardware / Single Board Computers (SBCs).
+Simple to use ADSB Feeder Images for common Single Board Computers like most of the Raspberry Pi family and many others. Web UI driven. Very limited technical skill required.
+ADSB.lol Docker Toolkit # For technically versed users: recommended for new stations that won&rsquo;t be running on a dedicated SBC.
+Install, run, and maintain an ADS-B / UAT / MLAT / ACARS / VDL2 / AIS feed client to a multitude of aggregators.
+Bare Metal # For technically versed users: recommended for existing stations.
+If you already have an ADS-B station, you can add ADSB.lol as a feeder, this will not interfere with your existing setup.
+All you need is BEAST out on port 30005.
+`}),e.add({id:4,href:"/website/docs/overview/",title:"Introduction",description:"",content:""}),e.add({id:5,href:"/website/docs/feeders-only/introduction/",title:"Introduction",description:`You now have access to the following features:
+MLAT Sync Map # My Map # re-api # BEAST + MLAT Outputs #`,content:`You now have access to the following features:
+MLAT Sync Map # My Map # re-api # BEAST + MLAT Outputs # `}),e.add({id:6,href:"/website/docs/get-started/",title:"Feed",description:"By feeding adsb.lol, you help us build a better network of flight tracking stations.",content:""}),e.add({id:7,href:"/website/docs/feeders-only/mlat-map/",title:"MLAT Map",description:"The MLAT Map is a tool to help you visualize the network of feeders around you.",content:`You can see the feeders you are connected with, and other useful information.
+https://mlat.decentrafly.org Please note that this map respects the privacy flag used by feeders. So any site that feeds with privacy enabled will not be shown on this map.
+It was made by lemonodor and wiedehopf `}),e.add({id:8,href:"/website/docs/feeders-only/my-map/",title:"My Map",description:"My Map is a map of the aircrafts that your station is receiving.",content:`Your map is available at the following address: https://my.decentrafly.org This link, accessed by your IP, redirects you to your own subdomain that can be shared with others publicly.
+Your location is always approximate, and can be off by several hundreds kilometers.
+Please note that because of an implementation detail (subject to change), this functionality may fail if you have multiple feeders coming from the same IP address. When combining the human hashes for each of the feeders, the resulting domain name may exceed the length limitation of the DNS lookup.
+`}),e.add({id:9,href:"/website/docs/get-started/adsb-image/",title:"ADSB.im",description:`This image is made and maintained by dirkhh with contributions from myself .
+Please follow the detailed instructions on the ADSB.im website.
+`,content:`This image is made and maintained by dirkhh with contributions from myself .
+Please follow the detailed instructions on the ADSB.im website.
+`}),e.add({id:10,href:"/website/docs/get-started/docker/",title:"Docker Toolkit",description:`By default, it feeds MLAT+ADSB to Decentrafly.org. You can enable UAT/ACARS/VDL2, and feed to your plane data to FlightRadar24, Radarbox, Piaware, and more It is designed to be run on a Raspberry Pi, but can be run on any Linux Debian-like system.
+With a few commands , you can easily feed to other community aggregators.
+Quick Start with Docker # To get started with the docker client,
+Run this as root on a fresh install of Raspberry Pi OS Lite or similar.
+`,content:`By default, it feeds MLAT+ADSB to Decentrafly.org. You can enable UAT/ACARS/VDL2, and feed to your plane data to FlightRadar24, Radarbox, Piaware, and more It is designed to be run on a Raspberry Pi, but can be run on any Linux Debian-like system.
+With a few commands , you can easily feed to other community aggregators.
+Quick Start with Docker # To get started with the docker client,
+Run this as root on a fresh install of Raspberry Pi OS Lite or similar.
+This script gets all the requirements for your system.
+For your own security, Please consider analysing the adsblol-init script which you are about to run on your system.
+curl -Ls https://raw.githubusercontent.com/decentrafly/feed/main/bin/adsblol-init | bash cd /opt/adsblol/ cp .env.example .env Then, set the environment variables.
+You can either edit the .env file, or run adsblol-env set &lt;key&gt; &lt;value&gt;
+# Altitude in meters adsblol-env set FEEDER_ALT_M 542 # Latitude adsblol-env set FEEDER_LAT 98.76543 # Longitude adsblol-env set FEEDER_LONG 12.34567 # Timezone (see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) adsblol-env set FEEDER_TZ America/New_York # SDR Serial Number adsblol-env set ADSB_DONGLE_SERIAL 1090 # Site name (shows up on the MLAT map!) adsblol-env set MLAT_SITE_NAME &quot;My epic site&quot; # Would you like to appear on mlat.adsb.lol? Then set this: adsblol-env unset ADSBLOL_MLAT_CONFIG These are the minimum environment variables you need to set.
+Then, run:
+adsblol-debug &amp;&amp; adsblol-up Let&rsquo;s check if everything is working:
+http://IP:8080 (readsb) http://IP:8082 (adsblol) https://decentrafly.org (Decentrafly.org) https://mlat.decentrafly.org (MLAT) Usage # By default, the client will feed to Decentrafly.org.
+To see the current list of supported aggregators, see the services.txt file.
+The adsblol service supports feeding to multiple aggregators.
+If you have an issue with the feed client, please paste.ee your error logs join our chat on zulip Restart the stack # adsblol-up Enabling a service # To enable a service, run adsblol-service enable &lt;service&gt; To disable a service, run adsblol-service disable &lt;service&gt; This is a helper command that will edit the services.txt file, and run adsblol-gen to generate a new cmdline.txt.
+You may have to define further environment variables in the .env file.
+Then, run adsblol-gen to generate a new cmdline.txt.
+The cmdline.txt is used by the adsblol binaries to know what services to start.
+Once you have done this, run adsblol-up to start the containers.
+Troubleshooting # To update, run adsblol-update
+Running adsblol-debug will tell you about common mistakes.
+I cannot find myself on the MLAT Map # Decentrafly.org enables the --privacy flag for your MLAT client by default. This hides you from the MLAT map.
+Do you want to appear on the map? Then run:
+adsblol-env unset ADSBLOL_MLAT_CONFIG &amp;&amp; adsblol-up Logs # adsblol-logs - view logs adsblol-logs -f - view logs and follow Services # adsblol-service enable &lt;service&gt; - enable a service adsblol-service disable &lt;service&gt; - disable a service adsblol-service list - list all enabled services Environment # adsblol-env list - list all environment variables adsblol-env set &lt;key&gt; - set an environment variable (also updates if it already exists) adsblol-env unset &lt;key&gt; - unset an environment variable SDR # adsblol-sdr test - Runs rtl_test adsblol-sdr dockertest - Runs rtl_test in a docker container adsblol-sdr dockerppm - Runs rtl_test in a docker container with the intent to estimate the PPM Reset # adsblol-reset - reset the /opt/adsblol directory Thank you SDR-Enthusiasts! # This would not be possible without SDR-Enthusiasts who have made the original docker-compose file.
+The client is largely based off of their work plus some command line interface tools to make running the stack a bit simpler.
+Their documentation can be very useful in enabling extra feeders. .
+Feeding directly to other aggregators # Where possible, Decentrafly.org commits to share data and ingest data directly with other aggregators which are willing to license their data openly.
+The adsblol service can feed to other aggregators.
+In this example, we feed theairtraffic.com and adsbexchange.com two aggregators you might want to consider sharing your data with.
+WARNING: ADSBexchange has recently been acquired by a private equity company with unknown plans for the data submitted. It does however have the largest MLAT network, giving you the best chance to locally identify overhead aircraft that do not explicitly share their location data.
+TheAirTraffic.com is run by Jack Sweeney This is not an endorsement and Decentrafly.org/myself are not affiliated with these aggregators.
+Run # NOTE: This is using --privacy, which excludes you from Decentrafly.org map, and should exclude you from other aggregators maps too.
+adsblol-env set ADSBLOL_ADDITIONAL_NET_CONNECTOR &quot;feed.adsbexchange.com,30004,beast_reduce_out;feed.theairtraffic.com,30004,beast_reduce_out&quot; adsblol-env set ADSBLOL_ADDITIONAL_MLAT_CONFIG &quot;feed.adsbexchange.com,31090,39001,--privacy;feed.theairtraffic.com,31090,39002,--privacy&quot; adsblol-env set MLATHUB_NET_CONNECTOR &quot;adsblol,39000,beast_in;adsblol,39001,beast_in;adsblol,39002,beast_in&quot; If you would like to disable privacy mode, instead, use:
+adsblol-env set ADSBLOL_ADDITIONAL_NET_CONNECTOR &quot;feed.adsbexchange.com,30004,beast_reduce_out;feed.theairtraffic.com,30004,beast_reduce_out&quot; adsblol-env set ADSBLOL_ADDITIONAL_MLAT_CONFIG &quot;feed.adsbexchange.com,31090,39001;feed.theairtraffic.com,31090,39002&quot; adsblol-env set MLATHUB_NET_CONNECTOR &quot;adsblol,39000,beast_in;adsblol,39001,beast_in;adsblol,39002,beast_in&quot; `}),e.add({id:11,href:"/website/docs/feeders-only/beast-mlat-out/",title:"BEAST MLAT Out",description:"Our aggregated data is available to all feeders.",content:`License: ODbL 1.0 Hostname: out.decentrafly.org
+Port: 1337 (BEAST) and 1338 (MLAT, SBS)
+These outputs are available to all feeders IPs.
+DISCLAIMER # Do not use your feeder for this. You need to spin up a new readsb.
+This feature is experimental. In particular, No support or guarantee of any kind is provided.
+Documentation assumes a high skill level. Please consider improving the documentation for the next person.
+Usage # You can use readsb to get the data locally, for example running directly:
+readsb --net-only --net-connector=out.decentrafly.org,1337,beast_in --net-connector=out.decentrafly.org,1338,sbs_in_mlat `}),e.add({id:12,href:"/website/docs/feeders-only/re-api/",title:"re-api",description:"re-api is the readsb HTTP API, available to all Decentrafly.org feeders.",content:`License: ODbL 1.0 You can access the API at the following address: https://re-api.decentrafly.org This is the readsb API of our entire network, unfiltered and unmodified.
+It is only accessible by your station&rsquo;s IP address, so if you want to access it from another location, you will need to use a VPN, or a proxy.
+Usage # See docs For example,
+https://re-api.decentrafly.org?circle=52,2,200 `}),e.add({id:13,href:"/website/docs/get-started/bare-metal/",title:"Bare Metal",description:` These scripts aid in setting up your current ADS-B receiver to feed decentrafly.org They will not disrupt any existing feed clients already present 1: Find coordinates / elevation: # https://www.freemaptools.com/elevation-finder.htm 2: Install the decentrafly feed client # curl -L -o /tmp/lol-feed.sh https://decentrafly.org/feed.sh sudo bash /tmp/lol-feed.sh 3: Check if your feed is working # That one&rsquo;s easy! Just go to https://decentrafly.org and you should show as feeding.
+Optional: local interface for your data http://192.168.X.XX/adsblol # Install / Update:
+`,content:` These scripts aid in setting up your current ADS-B receiver to feed decentrafly.org They will not disrupt any existing feed clients already present 1: Find coordinates / elevation: # https://www.freemaptools.com/elevation-finder.htm 2: Install the decentrafly feed client # curl -L -o /tmp/lol-feed.sh https://decentrafly.org/feed.sh sudo bash /tmp/lol-feed.sh 3: Check if your feed is working # That one&rsquo;s easy! Just go to https://decentrafly.org and you should show as feeding.
+Optional: local interface for your data http://192.168.X.XX/adsblol # Install / Update:
+sudo bash /usr/local/share/adsblol/git/install-or-update-interface.sh Remove:
+sudo bash /usr/local/share/tar1090/uninstall.sh adsblol Misc maintenance # Update # Update the feed client without reconfiguring
+curl -L -o /tmp/lol-update.sh https://raw.githubusercontent.com/decentrafly/feed/master/update.sh sudo bash /tmp/lol-update.sh Troubleshooting issues # If you encounter issues, please do a reboot and then supply these logs on zulip (last 20 lines for each is sufficient):
+sudo journalctl -u adsblol-feed --no-pager sudo journalctl -u adsblol-mlat --no-pager Display the configuration # cat /etc/default/adsblol Changing the configuration # This is the same as the initial installation. If the client is up to date it should not take as long as the original installation, otherwise this will also update the client which will take a moment.
+curl -L -o /tmp/lol-feed.sh https://decentrafly.org/feed.sh sudo bash /tmp/lol-feed.sh Restart # sudo systemctl restart adsblol-feed sudo systemctl restart adsblol-mlat Systemd Status # sudo systemctl status adsblol-mlat sudo systemctl status adsblol-feed Uninstall # sudo bash /usr/local/share/adsblol/uninstall.sh If the above doesn&rsquo;t work, you may be using an old version that didn&rsquo;t have the uninstall script,
+just disable the services and the scripts won&rsquo;t run anymore:
+sudo systemctl disable --now adsblol-feed sudo systemctl disable --now adsblol-mlat `}),e.add({id:14,href:"/website/docs/feeders-only/",title:"Feeders Only",description:"As a feeder, you help by providing data to the network. Thank you for your contribution.",content:""}),e.add({id:15,href:"/website/docs/acknowledgements/partners/",title:"Partners",description:"We share aggregated data with other aggregators, for the benefit of the community.",content:`Sharing Is Caring # For the benefit of the community, Decentrafly.org shares aggregated data with other aggregators who are willing to do the same.
+How It Works # We mutually share aggregated BEAST and MLAT data.
+No PII (personal information) is exchanged.
+Aggregators with an interest in open data and a sizeable coverage are encouraged to join.
+By sharing data with Decentrafly.org, you agree to license your data as CC0 .
+In exchange, you get access to the aggregated data of all the other aggregators, including Decentrafly.org, licensed to you as CC0 .
+This way, everyone benefits from the aggregated data of everyone else.
+Reach out to info [ at ] decentrafly.org
+FlyItalyADSB # Sharing data since February 2023.
+FlyItalyADSB is the first Italian community of flight tracking enthusiasts who thanks to a small antenna receive the position of the planes around them (up to 400km away).
+TheAirTraffic # Sharing data since July 2023.
+Run by Jack Sweeney and members of Ground Control `}),e.add({id:16,href:"/website/docs/hardware/adsb-equipment/",title:"ADS-B + UAT Equipment",description:"1090MHz and 978MHz equipment.",content:`SDR # AirNav RadarBox FlightStick (filter, no LNA) US DE NL IT UK FR ES (good starter, cheap) RTL-SDR (no filter, supports Bias-T to power other devices, most common! great value.) AliExpress no-name 1090 filtered (cheapest, least recommended) Best: Airspy Mini (no built-in filter, supports Bias-T, usually is best paired with a high quality LNA) Filter # If your SDR doesn&rsquo;t have a filter, you might benefit from one.
+Best: Sysmocom.de: 1090 MHz Cavity Filter Uputronics 1090MHz ADS-B Filtered Preamp Store US (recommended) There are very cheap filterend LNAs available directly from China that are suprisingly decent. LNA # An LNA is not required, but can help if you have a long cable run, or if you are using the Airspy Mini.
+Note that amplified filters like the Uputronics include an LNA.
+Nooelec Lana US DE UK NL FR ES IT Antenna # nooelec indoor US PCB antenna (cheapest) Sirio Antenne , based in Italy Vinnant , based in Slovakia (best) DPD Productions , based in US (best) Coax # Vinnant SMA Adapters # AliExpress (Many types!) `}),e.add({id:17,href:"/website/docs/acknowledgements/sponsors/",title:"Sponsors",description:`CloudFlare # As an open source project, we qualify for CloudFlare&rsquo;s free pro plan Zulip # Zulip is an open-source modern team chat app designed to keep both live and asynchronous conversations organized.
+`,content:`CloudFlare # As an open source project, we qualify for CloudFlare&rsquo;s free pro plan Zulip # Zulip is an open-source modern team chat app designed to keep both live and asynchronous conversations organized.
+`}),e.add({id:18,href:"/website/docs/overview/status/",title:"Status",description:"Uptime Status #",content:"Uptime Status # "}),e.add({id:19,href:"/website/docs/open-data/",title:"Open Data",description:"Decentrafly.org open data.",content:""}),e.add({id:20,href:"/website/docs/hardware/",title:"Hardware",description:"Recommended hardware",content:""}),e.add({id:21,href:"/website/docs/acknowledgements/",title:"Acknowledgements",description:"Decentrafly.org acknowledgements.",content:""}),e.add({id:22,href:"/website/docs/",title:"Docs",description:"Decentrafly.org docs.",content:""}),search.addEventListener("input",t,!0);function t(){const s=5;var n=this.value,o=e.search(n,{limit:s,enrich:!0});const t=new Map;for(const e of o.flatMap(e=>e.result)){if(t.has(e.doc.href))continue;t.set(e.doc.href,e.doc)}if(suggestions.innerHTML="",suggestions.classList.remove("d-none"),t.size===0&&n){const e=document.createElement("div");e.innerHTML=`No results for "<strong>${n}</strong>"`,e.classList.add("suggestion__no-results"),suggestions.appendChild(e);return}for(const[r,a]of t){const n=document.createElement("div");suggestions.appendChild(n);const e=document.createElement("a");e.href=r,n.appendChild(e);const o=document.createElement("span");o.textContent=a.title,o.classList.add("suggestion__title"),e.appendChild(o);const i=document.createElement("span");if(i.textContent=a.description,i.classList.add("suggestion__description"),e.appendChild(i),suggestions.appendChild(n),suggestions.childElementCount==s)break}}})()

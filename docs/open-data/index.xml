@@ -4,11 +4,11 @@
 &lt;li>readsb-prod-1&lt;/li>
 &lt;li>readsb-staging-0&lt;/li>
 &lt;/ul>
-&lt;p>&lt;a href="https://github.com/adsblol/globe_history" target="_blank" rel="noopener">https://github.com/adsblol/globe_history&lt;/a>
+&lt;p>&lt;a href="https://github.com/decentrafly/globe_history" target="_blank" rel="noopener">https://github.com/decentrafly/globe_history&lt;/a>
 &lt;/p>
 &lt;p>The data is made available by GitHub releases, a release is available daily for each of the above instances.&lt;/p>
 &lt;h2 id="usage">Usage &lt;a href="#usage" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
 &lt;p>The data contains a file per aircraft, a JSON GZIP file containing the data for that aircraft for the day.&lt;/p></description></item><item><title>API</title><link>https://john-d-fly.github.io/website/docs/open-data/api/</link><pubDate>Tue, 27 Jun 2023 22:26:11 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/open-data/api/</guid><description>&lt;p>The API is available to everyone.&lt;/p>
 &lt;h2 id="usage">Usage &lt;a href="#usage" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
-&lt;p>&lt;a href="https://api.adsb.lol" target="_blank" rel="noopener">https://api.adsb.lol&lt;/a>
+&lt;p>&lt;a href="https://api.decentrafly.org" target="_blank" rel="noopener">https://api.decentrafly.org&lt;/a>
 &lt;/p></description></item></channel></rss>
