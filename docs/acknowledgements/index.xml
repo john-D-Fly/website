@@ -25,9 +25,7 @@
 &lt;/p>
 &lt;h2 id="mlat-map-and-sync-table">MLAT Map and Sync Table &lt;a href="#mlat-map-and-sync-table" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
 &lt;p>&lt;a href="https://github.com/adsblol/mlat-server-sync-map/commit/e534d04c7a2718f194fe3f64bd8993f0b8e4ff23" target="_blank" rel="noopener">MLAT Table License&lt;/a>
-&lt;/p></description></item><item><title>Sponsors</title><link>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</link><pubDate>Tue, 27 Jun 2023 23:44:04 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</guid><description>&lt;h3 id="cloudflare">CloudFlare &lt;a href="#cloudflare" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
-&lt;p>As an open source project, we qualify for CloudFlare&amp;rsquo;s &lt;a href="https://blog.cloudflare.com/cloudflare-open-source-your-upgrade-is-on-the-house/" target="_blank" rel="noopener">free pro plan&lt;/a>
-&lt;/p>
-&lt;h3 id="zulip">Zulip &lt;a href="#zulip" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
-&lt;p>&lt;a href="https://zulipchat.com" target="_blank" rel="noopener">Zulip&lt;/a>
- is an open-source modern team chat app designed to keep both live and asynchronous conversations organized.&lt;/p></description></item></channel></rss>
+&lt;/p></description></item><item><title>Sponsors</title><link>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</link><pubDate>Tue, 27 Jun 2023 23:44:04 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</guid><description>&lt;h3 id="amazon-web-services">Amazon Web Services &lt;a href="#amazon-web-services" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>AWS is a cloud computing platform that provides a wide range of services, including computing, storage, and database services. We are able to develop Decentrafly using AWS credits to offset development costs while remaining able to scale to meet the needs of the community.&lt;/p>
+&lt;h3 id="nvidia-inception-program">NVIDIA Inception Program &lt;a href="#nvidia-inception-program" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+&lt;p>We are proud to be part of the NVIDIA Inception Program. This program provides free NVIDIA GPUs to startups seeking to accelerate their development.&lt;/p></description></item></channel></rss>
