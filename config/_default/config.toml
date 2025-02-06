@@ -1,4 +1,5 @@
 baseurl = "https://john-d-fly.github.io/website/"
+relativeURLs = true
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

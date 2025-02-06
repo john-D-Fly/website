@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ .Site.Params.languageTag | default "en-US" }}">
+  <!-- DEBUG: Template loading for {{ .Kind }} page -->
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
@@ -19,9 +20,7 @@
         {{ block "main" . }}{{ end }}
       </div>
     </div>
-    {{ if false }}
     {{ block "sidebar-prefooter" . }}{{ end }}
-    {{ end}}
     {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
     {{ partial "footer/script-footer.html" . }}
