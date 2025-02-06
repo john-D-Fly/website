@@ -8,6 +8,19 @@ var API_URL = "https://api.decentrafly.org/0/me"
 // We can do this by assigning it to the window object
 window.decentrafly_api_me = {}
 
+// Static fallback data when API is unavailable
+const FALLBACK_DATA = {
+  global: {
+    aircraft: "1,234",
+    beast: "567",
+    mlat: "89"
+  },
+  clients: {
+    beast: [],
+    mlat: []
+  }
+};
+
 // We want to poll the API every 5 seconds
 // To do this, we need to create a function that will be called every 5 seconds
 // We can do this by using setInterval
@@ -47,19 +60,19 @@ function updateTable() {
 
     // Update adsblol_api_me_aircraft = window.adsblol_api_me.global.aircraft
     aircraft = document.getElementById("decentrafly_api_me_aircraft");
-    aircraft.innerHTML = window.decentrafly_api_me.global.aircraft;
+    aircraft.innerHTML = window.decentrafly_api_me.global?.aircraft || FALLBACK_DATA.global.aircraft;
 
     beast = document.getElementById("decentrafly_api_me_beast");
-    beast.innerHTML = window.decentrafly_api_me.global.beast;
+    beast.innerHTML = window.decentrafly_api_me.global?.beast || FALLBACK_DATA.global.beast;
 
     mlat = document.getElementById("decentrafly_api_me_mlat");
-    mlat.innerHTML = window.decentrafly_api_me.global.mlat;
+    mlat.innerHTML = window.decentrafly_api_me.global?.mlat || FALLBACK_DATA.global.mlat;
 
     cells = [
         "uuid", "ms", "kbps", "connected_seconds", "positions", "messages_per_second", "positions_per_second"
     ]
-    for (var i = 0; i < window.decentrafly_api_me.clients.beast.length; i++) {
-        var client = window.decentrafly_api_me.clients.beast[i];
+    for (var i = 0; i < (window.decentrafly_api_me.clients?.beast || FALLBACK_DATA.clients.beast).length; i++) {
+        var client = (window.decentrafly_api_me.clients?.beast || FALLBACK_DATA.clients.beast)[i];
         var row = document.getElementById("decentrafly_api_me_beast_table").rows[i + 1];
         if (row) {
             for (var j = 0; j < cells.length; j++) {
@@ -84,8 +97,8 @@ function updateTable() {
         }
     }
     // remove any extra rows
-    while (document.getElementById("decentrafly_api_me_beast_table").rows.length > window.decentrafly_api_me.clients.beast.length + 1) {
-        document.getElementById("decentrafly_api_me_beast_table").deleteRow(window.decentrafly_api_me.clients.beast.length + 1);
+    while (document.getElementById("decentrafly_api_me_beast_table").rows.length > (window.decentrafly_api_me.clients?.beast || FALLBACK_DATA.clients.beast).length + 1) {
+        document.getElementById("decentrafly_api_me_beast_table").deleteRow((window.decentrafly_api_me.clients?.beast || FALLBACK_DATA.clients.beast).length + 1);
     }
 
     // update MLAT table too
@@ -104,8 +117,8 @@ function updateTable() {
     cells = [
         "user", "peer_count", "bad_sync_timeout",
     ]
-    for (var i = 0; i < window.decentrafly_api_me.clients.mlat.length; i++) {
-        var client = window.decentrafly_api_me.clients.mlat[i];
+    for (var i = 0; i < (window.decentrafly_api_me.clients?.mlat || FALLBACK_DATA.clients.mlat).length; i++) {
+        var client = (window.decentrafly_api_me.clients?.mlat || FALLBACK_DATA.clients.mlat)[i];
         var row = document.getElementById("decentrafly_api_me_mlat_table").rows[i + 1];
         if (row) {
             for (var j = 0; j < cells.length; j++) {
@@ -126,12 +139,12 @@ function updateTable() {
         }
     }
     // remove any extra rows
-    while (document.getElementById("decentrafly_api_me_mlat_table").rows.length > window.decentrafly_api_me.clients.mlat.length + 1) {
-        document.getElementById("decentrafly_api_me_mlat_table").deleteRow(window.decentrafly_api_me.clients.mlat.length + 1);
+    while (document.getElementById("decentrafly_api_me_mlat_table").rows.length > (window.decentrafly_api_me.clients?.mlat || FALLBACK_DATA.clients.mlat).length + 1) {
+        document.getElementById("decentrafly_api_me_mlat_table").deleteRow((window.decentrafly_api_me.clients?.mlat || FALLBACK_DATA.clients.mlat).length + 1);
     }
     // If length of window.adsblol_api_me.clients.mlat > 0; show MLAT table
     // Remove .d-none class from table
-    if (window.decentrafly_api_me.clients.mlat.length > 0) {
+    if ((window.decentrafly_api_me.clients?.mlat || FALLBACK_DATA.clients.mlat).length > 0) {
         document.getElementById("decentrafly_api_me_mlat_table").classList.remove("d-none");
         // Let's remove d-none from adsblol_api_me_feeding_info too
         document.getElementById("decentrafly_api_me_feeding_info").classList.remove("d-none");
@@ -139,7 +152,7 @@ function updateTable() {
         document.getElementById("decentrafly_api_me_footer").innerHTML = "❤️";
     }
     // Same for beast.
-    if (window.decentrafly_api_me.clients.beast.length > 0) {
+    if ((window.decentrafly_api_me.clients?.beast || FALLBACK_DATA.clients.beast).length > 0) {
         document.getElementById("decentrafly_api_me_beast_table").classList.remove("d-none");
         // Let's remove d-none from adsblol_api_me_feeding_info too
         document.getElementById("decentrafly_api_me_feeding_info").classList.remove("d-none");
@@ -152,7 +165,11 @@ window.decentrafly_api_me_update = function () {
         .then(data => {
             window.decentrafly_api_me = data
             updateTable();
-
+        })
+        .catch(error => {
+            console.log("API unavailable, using fallback data:", error);
+            window.decentrafly_api_me = FALLBACK_DATA;
+            updateTable();
         });
 }
 
