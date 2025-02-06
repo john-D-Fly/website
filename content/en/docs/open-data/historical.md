@@ -19,7 +19,7 @@ Historical data is dumped daily by:
 - readsb-prod-1
 - readsb-staging-0
 
-<https://github.com/adsblol/globe_history>
+<https://github.com/decentrafly/globe_history>
 
 The data is made available by GitHub releases, a release is available daily for each of the above instances.
 

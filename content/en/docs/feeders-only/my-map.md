@@ -13,7 +13,7 @@ weight: 102
 toc: true
 ---
 
-Your map is available at the following address: <https://my.adsb.lol>
+Your map is available at the following address: <https://my.decentrafly.org>
 
 This link, accessed by your IP, redirects you to your own subdomain that can be shared with others publicly.
 

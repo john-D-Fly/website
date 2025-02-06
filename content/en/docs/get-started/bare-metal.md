@@ -6,23 +6,23 @@ images: []
 type: docs
 weight: 103
 ---
-- These scripts aid in setting up your current ADS-B receiver to feed [adsb.lol](https://adsb.lol)
+- These scripts aid in setting up your current ADS-B receiver to feed [decentrafly.org](https://decentrafly.org)
 - They will not disrupt any existing feed clients already present
 
 ## 1: Find coordinates / elevation:
 
 <https://www.freemaptools.com/elevation-finder.htm>
 
-## 2: Install the adsblol feed client
+## 2: Install the decentrafly feed client
 
 ```
-curl -L -o /tmp/lol-feed.sh https://adsb.lol/feed.sh
+curl -L -o /tmp/lol-feed.sh https://decentrafly.org/feed.sh
 sudo bash /tmp/lol-feed.sh
 ```
 
 ## 3: Check if your feed is working
 
-That one's easy! Just go to <https://adsb.lol> and you should show as feeding.
+That one's easy! Just go to <https://decentrafly.org> and you should show as feeding.
 
 
 ### Optional: local interface for your data http://192.168.X.XX/adsblol
@@ -42,7 +42,7 @@ sudo bash /usr/local/share/tar1090/uninstall.sh adsblol
 Update the feed client without reconfiguring
 
 ```
-curl -L -o /tmp/lol-update.sh https://raw.githubusercontent.com/adsblol/feed/master/update.sh
+curl -L -o /tmp/lol-update.sh https://raw.githubusercontent.com/decentrafly/feed/master/update.sh
 sudo bash /tmp/lol-update.sh
 ```
 
@@ -70,7 +70,7 @@ If the client is up to date it should not take as long as the original installat
 otherwise this will also update the client which will take a moment.
 
 ```
-curl -L -o /tmp/lol-feed.sh https://adsb.lol/feed.sh
+curl -L -o /tmp/lol-feed.sh https://decentrafly.org/feed.sh
 sudo bash /tmp/lol-feed.sh
 ```
 

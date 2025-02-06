@@ -1,6 +1,6 @@
 ---
 title: "Acknowledgements"
-description: "ADSB.lol acknowledgements."
+description: "Decentrafly.org acknowledgements."
 draft: false
 images: []
 weight: 2000

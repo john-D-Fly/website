@@ -17,4 +17,4 @@ The API is available to everyone.
 
 ## Usage
 
-<https://api.adsb.lol>
+<https://api.decentrafly.org>

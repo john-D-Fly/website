@@ -15,7 +15,7 @@ toc: false
 ---
 ## Sharing Is Caring
 
-For the benefit of the community, ADSB.lol shares aggregated data with other aggregators who are willing to do the same.
+For the benefit of the community, Decentrafly.org shares aggregated data with other aggregators who are willing to do the same.
 
 ## How It Works
 
@@ -25,14 +25,14 @@ No PII (personal information) is exchanged.
 
 Aggregators with an interest in open data and a sizeable coverage are encouraged to join.
 
-By sharing data with ADSB.lol, you agree to license your data as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/).
+By sharing data with Decentrafly.org, you agree to license your data as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/).
 
-In exchange, you get access to the aggregated data of all the other aggregators, including ADSB.lol, licensed to you as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/).
+In exchange, you get access to the aggregated data of all the other aggregators, including Decentrafly.org, licensed to you as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/).
 
 This way, everyone benefits from the aggregated data of everyone else.
 
 Reach out to
-```info [ at ] adsb.lol```
+```info [ at ] decentrafly.org```
 
 
 ### FlyItalyADSB

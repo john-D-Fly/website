@@ -1,6 +1,6 @@
 ---
 title: "Open Data"
-description: "ADSB.lol open data."
+description: "Decentrafly.org open data."
 draft: false
 images: []
 weight: 1000

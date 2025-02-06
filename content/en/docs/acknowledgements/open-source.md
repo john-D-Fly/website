@@ -2,8 +2,8 @@
 title: "Open Source"
 description: ""
 lead: ""
-date: 2023-06-28T01:29:22+02:00
-lastmod: 2023-07-01T12:51:00+02:00
+date: 2025-02-06T08:48:23+00:00
+lastmod: 2025-02-06T08:48:23+00:00
 draft: false
 images: []
 menu:
@@ -47,9 +47,9 @@ The [VRS standing data](https://github.com/vradarserver/standing-data/) is [form
 
 Acknowledgements go to the [Virtual Radar Server contributors](https://www.virtualradarserver.co.uk/Credits.aspx)
 
-## adsb.lol API
+## Decentrafly.org API
 
-[We](https://github.com/adsblol/api/graphs/contributors?from=2023-01-29&to=2037-07-01&type=d) contribute some code.
+[We](https://github.com/decentrafly/api/graphs/contributors?from=2023-01-29&to=2037-07-01&type=d) contribute some code.
 
 The API is possible thanks to [Valkey](https://Valkey.io/) acting as the database for the fun _Route_, _My Map_ and _Screenshot_ features.
 

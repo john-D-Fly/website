@@ -11,4 +11,4 @@ weight: 1000
 toc: true
 ---
 
-## [Uptime Status](https://status.adsb.lol)
+## [Uptime Status](https://status.decentrafly.org)

@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-description: "ADSB.lol is a flight tracking network that aggregates data from volunteer feeders around the world."
-lead: "ADSB.lol is a flight tracking network that aggregates data from volunteer feeders around the world."
+description: "Decentrafly.org is a flight tracking network that aggregates data from volunteer feeders around the world."
+lead: "Decentrafly.org is a flight tracking network that aggregates data from volunteer feeders around the world."
 date: 2023-06-27T22:25:19+02:00
 lastmod: 2023-06-27T22:25:19+02:00
 draft: false
@@ -16,7 +16,7 @@ toc: true
 
 ## Get started
 
-### [Feed ADSB.lol](../../get-started/introduction)
+### [Feed Decentrafly.org](../../get-started/introduction)
 
 Instructions on how to get started sharing your station's data.
 

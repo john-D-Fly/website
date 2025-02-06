@@ -7,7 +7,7 @@ type: docs
 weight: 102
 ---
 
-By default, it feeds MLAT+ADSB to adsb.lol. You can enable UAT/ACARS/VDL2, and feed to your plane data to FlightRadar24, Radarbox, Piaware, [and more](https://github.com/adsblol/feed/blob/main/.env.example)
+By default, it feeds MLAT+ADSB to Decentrafly.org. You can enable UAT/ACARS/VDL2, and feed to your plane data to FlightRadar24, Radarbox, Piaware, [and more](https://github.com/decentrafly/feed/blob/main/.env.example)
 
 It is designed to be run on a Raspberry Pi, but can be run on any Linux Debian-like system.
 
@@ -24,7 +24,7 @@ This script gets all the requirements for your system.
 **For your own security,** Please consider [analysing](https://github.com/adsblol/feed/blob/main/bin/adsblol-init) the `adsblol-init` script which you are about to run on your system.
 
 ```
-curl -Ls https://raw.githubusercontent.com/adsblol/feed/main/bin/adsblol-init | bash
+curl -Ls https://raw.githubusercontent.com/decentrafly/feed/main/bin/adsblol-init | bash
 cd /opt/adsblol/
 cp .env.example .env
 ```
@@ -60,12 +60,12 @@ Let's check if everything is working:
 
 - [ ] <http://IP:8080> (readsb)
 - [ ] <http://IP:8082> (adsblol)
-- [ ] <https://adsb.lol> (ADSB)
-- [ ] <https://mlat.adsb.lol> (MLAT)
+- [ ] <https://decentrafly.org> (Decentrafly.org)
+- [ ] <https://mlat.decentrafly.org> (MLAT)
 
 ## Usage
 
-By default, the client will feed to adsb.lol.
+By default, the client will feed to Decentrafly.org.
 
 To see the current list of supported aggregators, see the [services.txt](services.txt) file.
 
@@ -102,7 +102,7 @@ Running `adsblol-debug` will tell you about common mistakes.
 
 ### I cannot find myself on the MLAT Map
 
-adsb.lol enables the `--privacy` flag for your MLAT client by default.
+Decentrafly.org enables the `--privacy` flag for your MLAT client by default.
 This hides you from the MLAT map.
 
 Do you want to appear on the map? Then run:
@@ -145,7 +145,7 @@ The client is largely based off of their work plus some command line interface t
 
 ## Feeding directly to other aggregators
 
-Where possible, adsb.lol commits to share data and ingest data directly with other aggregators which are willing to license their data openly.
+Where possible, Decentrafly.org commits to share data and ingest data directly with other aggregators which are willing to license their data openly.
 
 The `adsblol` service can feed to other aggregators.
 
@@ -156,11 +156,11 @@ two aggregators you might want to consider sharing your data with.
 
 [TheAirTraffic.com](https://theairtraffic.com) is run by [Jack Sweeney](https://grndcntrl.net/?ref=adsblol)
 
-This is not an endorsement and adsb.lol/myself are not affiliated with these aggregators.
+This is not an endorsement and Decentrafly.org/myself are not affiliated with these aggregators.
 
 ### Run
 
-**NOTE:** This is using `--privacy`, which excludes you from adsb.lol map, and should exclude you from other aggregators maps too.
+**NOTE:** This is using `--privacy`, which excludes you from Decentrafly.org map, and should exclude you from other aggregators maps too.
 
 ```
 adsblol-env set ADSBLOL_ADDITIONAL_NET_CONNECTOR "feed.adsbexchange.com,30004,beast_reduce_out;feed.theairtraffic.com,30004,beast_reduce_out"

@@ -15,7 +15,7 @@ toc: true
 
 You can see the feeders you are connected with, and other useful information.
 
-<https://mlat.adsb.lol>
+<https://mlat.decentrafly.org>
 
 Please note that this map respects the privacy flag used by feeders. So any site that feeds with privacy enabled will not be shown on this map.
 
