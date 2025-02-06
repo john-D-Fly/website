@@ -7,7 +7,25 @@
 &lt;p>By sharing data with Decentrafly.org, you agree to license your data as &lt;a href="https://creativecommons.org/share-your-work/public-domain/cc0/" target="_blank" rel="noopener">CC0&lt;/a>
 .&lt;/p>
 &lt;p>In exchange, you get access to the aggregated data of all the other aggregators, including Decentrafly.org, licensed to you as &lt;a href="https://creativecommons.org/share-your-work/public-domain/cc0/" target="_blank" rel="noopener">CC0&lt;/a>
-.&lt;/p></description></item><item><title>Sponsors</title><link>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</link><pubDate>Tue, 27 Jun 2023 23:44:04 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</guid><description>&lt;h3 id="cloudflare">CloudFlare &lt;a href="#cloudflare" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
+.&lt;/p></description></item><item><title>Open Source</title><link>https://john-d-fly.github.io/website/docs/acknowledgements/open-source/</link><pubDate>Thu, 06 Feb 2025 08:48:23 +0000</pubDate><guid>https://john-d-fly.github.io/website/docs/acknowledgements/open-source/</guid><description>&lt;h2 id="readsb">readsb &lt;a href="#readsb" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>&lt;a href="https://github.com/wiedehopf/readsb" target="_blank" rel="noopener">readsb&lt;/a>
+ is an ADS-B decoder swiss knife.&lt;/p>
+&lt;p>It is used extensively all the way from the feeders to what is being shown on the map.&lt;/p>
+&lt;p>&lt;a href="https://github.com/wiedehopf/readsb/blob/dev/LICENSE" target="_blank" rel="noopener">LICENSE&lt;/a>
+&lt;/p>
+&lt;h2 id="tar1090">tar1090 &lt;a href="#tar1090" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>&lt;a href="https://github.com/wiedehopf/tar1090" target="_blank" rel="noopener">tar1090&lt;/a>
+ provides an improved webinterface for use with ADS-B decoders readsb / dump1090-fa.&lt;/p>
+&lt;p>&lt;a href="https://github.com/wiedehopf/tar1090/blob/master/LICENSE" target="_blank" rel="noopener">LICENSE&lt;/a>
+&lt;/p>
+&lt;h2 id="mlat-server">mlat-server &lt;a href="#mlat-server" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>&lt;a href="https://github.com/katlol/mlat-server/blob/master/COPYING" target="_blank" rel="noopener">mlat-server&lt;/a>
+ is a Mode S multilateration server that is designed to operate with clients that do not have synchronized clocks.&lt;/p>
+&lt;p>&lt;a href="https://github.com/katlol/mlat-server/blob/master/COPYING" target="_blank" rel="noopener">LICENSE&lt;/a>
+&lt;/p>
+&lt;h2 id="mlat-map-and-sync-table">MLAT Map and Sync Table &lt;a href="#mlat-map-and-sync-table" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h2>
+&lt;p>&lt;a href="https://github.com/adsblol/mlat-server-sync-map/commit/e534d04c7a2718f194fe3f64bd8993f0b8e4ff23" target="_blank" rel="noopener">MLAT Table License&lt;/a>
+&lt;/p></description></item><item><title>Sponsors</title><link>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</link><pubDate>Tue, 27 Jun 2023 23:44:04 +0200</pubDate><guid>https://john-d-fly.github.io/website/docs/acknowledgements/sponsors/</guid><description>&lt;h3 id="cloudflare">CloudFlare &lt;a href="#cloudflare" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
 &lt;p>As an open source project, we qualify for CloudFlare&amp;rsquo;s &lt;a href="https://blog.cloudflare.com/cloudflare-open-source-your-upgrade-is-on-the-house/" target="_blank" rel="noopener">free pro plan&lt;/a>
 &lt;/p>
 &lt;h3 id="zulip">Zulip &lt;a href="#zulip" class="anchor" aria-hidden="true">#&lt;/a>&lt;/h3>
