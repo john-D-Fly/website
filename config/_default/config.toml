@@ -1,7 +1,5 @@
 baseurl = "https://john-d-fly.github.io/website/"
-relativeURLs = true
-uglyURLs = false
-canonifyURLs = true
+canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true

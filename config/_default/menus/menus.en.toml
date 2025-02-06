@@ -5,12 +5,12 @@
 
 [[main]]
   name = "Blog"
-  url = "/website/blog/"
+  url = "/blog/"
   weight = 20
 
 [[main]]
   name = "Docs"
-  url = "/website/docs/overview/introduction/"
+  url = "/docs/overview/introduction/"
   weight = 30
 
 [[social]]
@@ -34,5 +34,5 @@
 
 [[footer]]
   name = "Privacy and License"
-  url = "/website/privacy-license/"
+  url = "/privacy-license/"
   weight = 10
