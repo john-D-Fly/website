@@ -1,12 +1,12 @@
 // Poll data from /api/0/me
 // and update the UI
 
-var API_URL = "https://api.adsb.lol/0/me"
+var API_URL = "https://api.decentrafly.org/0/me"
 
 // We want to make it globally accessible within the rest of the browser
 // To do this, we need to create a global variable
 // We can do this by assigning it to the window object
-window.adsblol_api_me = {}
+window.decentrafly_api_me = {}
 
 // We want to poll the API every 5 seconds
 // To do this, we need to create a function that will be called every 5 seconds
@@ -46,25 +46,25 @@ function updateTable() {
     // We also remove the row if it's the first row, because that's the header.
 
     // Update adsblol_api_me_aircraft = window.adsblol_api_me.global.aircraft
-    aircraft = document.getElementById("adsblol_api_me_aircraft");
-    aircraft.innerHTML = window.adsblol_api_me.global.aircraft;
+    aircraft = document.getElementById("decentrafly_api_me_aircraft");
+    aircraft.innerHTML = window.decentrafly_api_me.global.aircraft;
 
-    beast = document.getElementById("adsblol_api_me_beast");
-    beast.innerHTML = window.adsblol_api_me.global.beast;
+    beast = document.getElementById("decentrafly_api_me_beast");
+    beast.innerHTML = window.decentrafly_api_me.global.beast;
 
-    mlat = document.getElementById("adsblol_api_me_mlat");
-    mlat.innerHTML = window.adsblol_api_me.global.mlat;
+    mlat = document.getElementById("decentrafly_api_me_mlat");
+    mlat.innerHTML = window.decentrafly_api_me.global.mlat;
 
     cells = [
         "uuid", "ms", "kbps", "connected_seconds", "positions", "messages_per_second", "positions_per_second"
     ]
-    for (var i = 0; i < window.adsblol_api_me.clients.beast.length; i++) {
-        var client = window.adsblol_api_me.clients.beast[i];
-        var row = document.getElementById("adsblol_api_me_beast_table").rows[i + 1];
+    for (var i = 0; i < window.decentrafly_api_me.clients.beast.length; i++) {
+        var client = window.decentrafly_api_me.clients.beast[i];
+        var row = document.getElementById("decentrafly_api_me_beast_table").rows[i + 1];
         if (row) {
             for (var j = 0; j < cells.length; j++) {
                 if (row.cells[j].innerHTML != client[cells[j]]) {
-                    row.cells[j].classList.add("adsblol_blink");
+                    row.cells[j].classList.add("decentrafly_blink");
                     row.cells[j].innerHTML = client[cells[j]];
                     // to [0] add class aloltooltiptext
                     if (j == 0) {
@@ -73,7 +73,7 @@ function updateTable() {
                 }
             }
         } else {
-            row = document.getElementById("adsblol_api_me_beast_table").insertRow(i + 1);
+            row = document.getElementById("decentrafly_api_me_beast_table").insertRow(i + 1);
             for (var j = 0; j < cells.length; j++) {
                 var cell = row.insertCell(j);
                 cell.innerHTML = client[cells[j]];
@@ -84,8 +84,8 @@ function updateTable() {
         }
     }
     // remove any extra rows
-    while (document.getElementById("adsblol_api_me_beast_table").rows.length > window.adsblol_api_me.clients.beast.length + 1) {
-        document.getElementById("adsblol_api_me_beast_table").deleteRow(window.adsblol_api_me.clients.beast.length + 1);
+    while (document.getElementById("decentrafly_api_me_beast_table").rows.length > window.decentrafly_api_me.clients.beast.length + 1) {
+        document.getElementById("decentrafly_api_me_beast_table").deleteRow(window.decentrafly_api_me.clients.beast.length + 1);
     }
 
     // update MLAT table too
@@ -104,18 +104,18 @@ function updateTable() {
     cells = [
         "user", "peer_count", "bad_sync_timeout",
     ]
-    for (var i = 0; i < window.adsblol_api_me.clients.mlat.length; i++) {
-        var client = window.adsblol_api_me.clients.mlat[i];
-        var row = document.getElementById("adsblol_api_me_mlat_table").rows[i + 1];
+    for (var i = 0; i < window.decentrafly_api_me.clients.mlat.length; i++) {
+        var client = window.decentrafly_api_me.clients.mlat[i];
+        var row = document.getElementById("decentrafly_api_me_mlat_table").rows[i + 1];
         if (row) {
             for (var j = 0; j < cells.length; j++) {
                 if (row.cells[j].innerHTML != client[cells[j]]) {
-                    row.cells[j].classList.add("adsblol_blink");
+                    row.cells[j].classList.add("decentrafly_blink");
                     row.cells[j].innerHTML = client[cells[j]];
                 }
             }
         } else {
-            row = document.getElementById("adsblol_api_me_mlat_table").insertRow(i + 1);
+            row = document.getElementById("decentrafly_api_me_mlat_table").insertRow(i + 1);
             for (var j = 0; j < cells.length; j++) {
                 var cell = row.insertCell(j);
                 cell.innerHTML = client[cells[j]];
@@ -126,31 +126,31 @@ function updateTable() {
         }
     }
     // remove any extra rows
-    while (document.getElementById("adsblol_api_me_mlat_table").rows.length > window.adsblol_api_me.clients.mlat.length + 1) {
-        document.getElementById("adsblol_api_me_mlat_table").deleteRow(window.adsblol_api_me.clients.mlat.length + 1);
+    while (document.getElementById("decentrafly_api_me_mlat_table").rows.length > window.decentrafly_api_me.clients.mlat.length + 1) {
+        document.getElementById("decentrafly_api_me_mlat_table").deleteRow(window.decentrafly_api_me.clients.mlat.length + 1);
     }
     // If length of window.adsblol_api_me.clients.mlat > 0; show MLAT table
     // Remove .d-none class from table
-    if (window.adsblol_api_me.clients.mlat.length > 0) {
-        document.getElementById("adsblol_api_me_mlat_table").classList.remove("d-none");
+    if (window.decentrafly_api_me.clients.mlat.length > 0) {
+        document.getElementById("decentrafly_api_me_mlat_table").classList.remove("d-none");
         // Let's remove d-none from adsblol_api_me_feeding_info too
-        document.getElementById("adsblol_api_me_feeding_info").classList.remove("d-none");
+        document.getElementById("decentrafly_api_me_feeding_info").classList.remove("d-none");
         // put a heart emoji in the footer
-        document.getElementById("adsblol_api_me_footer").innerHTML = "❤️";
+        document.getElementById("decentrafly_api_me_footer").innerHTML = "❤️";
     }
     // Same for beast.
-    if (window.adsblol_api_me.clients.beast.length > 0) {
-        document.getElementById("adsblol_api_me_beast_table").classList.remove("d-none");
+    if (window.decentrafly_api_me.clients.beast.length > 0) {
+        document.getElementById("decentrafly_api_me_beast_table").classList.remove("d-none");
         // Let's remove d-none from adsblol_api_me_feeding_info too
-        document.getElementById("adsblol_api_me_feeding_info").classList.remove("d-none");
+        document.getElementById("decentrafly_api_me_feeding_info").classList.remove("d-none");
     }
 }
 
-window.adsblol_api_me_update = function () {
+window.decentrafly_api_me_update = function () {
     fetch(API_URL)
         .then(response => response.json())
         .then(data => {
-            window.adsblol_api_me = data
+            window.decentrafly_api_me = data
             updateTable();
 
         });
@@ -160,6 +160,6 @@ window.adsblol_api_me_update = function () {
 // call window.adsblol_api_me_update
 // and set interval to 5 seconds
 document.addEventListener("DOMContentLoaded", function () {
-    setInterval(window.adsblol_api_me_update, 5000);
-    window.adsblol_api_me_update();
+    setInterval(window.decentrafly_api_me_update, 5000);
+    window.decentrafly_api_me_update();
 });

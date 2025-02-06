@@ -73,7 +73,7 @@ alertText = "Introducing the Doks child theme, several DX + UX updates, and more
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/adsblol/website"
+docsRepo = "https://github.com/decentrafly/website"
 docsRepoBranch = "main"
 docsRepoSubPath = ""
 editPage = true
