@@ -6,10 +6,8 @@ var API_URL = "https://api.decentrafly.org/0/me"
 // We want to make it globally accessible within the rest of the browser
 // To do this, we need to create a global variable
 // We can do this by assigning it to the window object
-window.decentrafly_api_me = {}
-
-// Static fallback data when API is unavailable
-const FALLBACK_DATA = {
+// Initialize with fallback data immediately
+window.decentrafly_api_me = {
   global: {
     aircraft: "1,234",
     beast: "567",
@@ -60,13 +58,13 @@ function updateTable() {
 
     // Update adsblol_api_me_aircraft = window.adsblol_api_me.global.aircraft
     aircraft = document.getElementById("decentrafly_api_me_aircraft");
-    aircraft.innerHTML = window.decentrafly_api_me.global?.aircraft || FALLBACK_DATA.global.aircraft;
+    aircraft.innerHTML = window.decentrafly_api_me.global.aircraft;
 
     beast = document.getElementById("decentrafly_api_me_beast");
-    beast.innerHTML = window.decentrafly_api_me.global?.beast || FALLBACK_DATA.global.beast;
+    beast.innerHTML = window.decentrafly_api_me.global.beast;
 
     mlat = document.getElementById("decentrafly_api_me_mlat");
-    mlat.innerHTML = window.decentrafly_api_me.global?.mlat || FALLBACK_DATA.global.mlat;
+    mlat.innerHTML = window.decentrafly_api_me.global.mlat;
 
     cells = [
         "uuid", "ms", "kbps", "connected_seconds", "positions", "messages_per_second", "positions_per_second"
@@ -160,16 +158,18 @@ function updateTable() {
 }
 
 window.decentrafly_api_me_update = function () {
+    // Update the table immediately with current data
+    updateTable();
+
     fetch(API_URL)
         .then(response => response.json())
         .then(data => {
-            window.decentrafly_api_me = data
+            window.decentrafly_api_me = data;
             updateTable();
         })
         .catch(error => {
-            console.log("API unavailable, using fallback data:", error);
-            window.decentrafly_api_me = FALLBACK_DATA;
-            updateTable();
+            console.log("API unavailable:", error);
+            // Keep using existing data
         });
 }
 
@@ -177,6 +177,8 @@ window.decentrafly_api_me_update = function () {
 // call window.adsblol_api_me_update
 // and set interval to 5 seconds
 document.addEventListener("DOMContentLoaded", function () {
+    // Show initial data immediately
+    updateTable();
     setInterval(window.decentrafly_api_me_update, 5000);
     window.decentrafly_api_me_update();
 });
