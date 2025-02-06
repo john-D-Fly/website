@@ -35,14 +35,14 @@ Reach out to
 ```info [ at ] decentrafly.org```
 
 
-### FlyItalyADSB
+### AURA Network Systems, Inc.
 
-Sharing data since February 2023.
+Sharing data since December 2023.
 
-[FlyItalyADSB](https://flyitalyadsb.com) is the first Italian community of flight tracking enthusiasts who thanks to a small antenna receive the position of the planes around them (up to 400km away).
+[AURA Network Systems](https://auranetworksystems.com) is a leader in secure and reliable communications solutions for the aviation industry. AURA has been awarded a [Federal Aviation Administration (FAA) Broad Agency Announcement (BAA) contract](https://auranetworksystems.com/news/aura-awarded-faa-contract-to-enhance-uas-integration-in-national-airspace) to demonstrate and validate technologies in support of the safe integration of Uncrewed Aircraft Systems (UAS) into the National Airspace System (NAS).
 
-### TheAirTraffic
+### ADSB.lol
 
-Sharing data since July 2023.
+This website was forked from [ADSB.lol](https://adsb.lol) and we are grateful for the work done by ADSB.lol.
 
-Run by [Jack Sweeney](https://github.com/Jxck-S) and members of [Ground Control](https://grndcntrl.net/)
+Run by [iakat](https://github.com/iakat) 

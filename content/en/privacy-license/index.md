@@ -18,7 +18,7 @@ To the extent allowed by law, Users will indemnify, defend and hold harmless Dec
 No personal data is collected besides a temporary storage of log files which is kept for less than 30 days.
 ## Hosting Provider
 
-Decentrafly.org is hosted by Netcup, with servers in Germany.
+Decentrafly.org is hosted by AWS, with servers in Virginia, USA.
 
 Parts of static data are served by GitHub, proxied by CloudFlare.
 

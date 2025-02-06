@@ -1,5 +1,5 @@
 ---
-title: "Welcome to the ADSB.lol Blog"
+title: "Welcome to the Decentrafly.org Blog"
 description: ""
 excerpt: ""
 date: 2023-06-28T00:20:36+02:00
@@ -14,6 +14,6 @@ pinned: false
 homepage: false
 ---
 
-Welcome to the ADSB.lol Blog!
+Welcome to the Decentrafly.org Blog!
 
-RSS: <https://adsb.lol/blog/index.xml>
+RSS: <https://decentrafly.org/blog/index.xml>

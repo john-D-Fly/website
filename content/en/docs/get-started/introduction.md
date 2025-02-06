@@ -14,9 +14,15 @@ weight: 100
 toc: false
 ---
 
-## Feed ADSB.lol
+## Feed Decentrafly.org
 
 Adding a receiver to our network is easy. You can use any of the following methods:
+
+### [Decentrafly Feeder](https://github.com/decentrafly/Decentrafly-Feeder)
+
+For existing stations, this is the easiest way to get started.
+
+Follow the instructions in the [Decentrafly Feeder](https://github.com/decentrafly/Decentrafly-Feeder) repository to get started.
 
 ### [ADSB.im Image](https://adsb.im/howto)
 
