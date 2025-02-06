@@ -5,13 +5,13 @@
 
 [[main]]
   name = "Blog"
-  url = "/blog/"
+  url = "/website/blog/"
   weight = 20
 
 [[main]]
   name = "Docs"
+  url = "/website/docs/overview/introduction/"
   weight = 30
-  url = "/docs/overview/introduction/"
 
 [[social]]
   name = "Zulip (chat/forum)"
