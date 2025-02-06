@@ -15,7 +15,7 @@
 
 [[main]]
   name = "ADSB.tv"
-  url = "https://adsb.tv"
+  url = "https://john-d-fly.github.io/adsb-tv-map/"
   weight = 40
 
 [[main]]
