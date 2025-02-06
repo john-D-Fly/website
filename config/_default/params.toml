@@ -1,25 +1,25 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "ADSB.lol"
+title = "Decentrafly.org"
 titleSeparator = "✈"
-titleAddition = "unfiltered flight tracking, open data"
-description = "ASDB.lol is a community unfiltered live flight tracker and an open data source."
+titleAddition = "tokenized flight tracking, open live data"
+description = "Decentrafly.org is a community unfiltered live flight tracker and an open data source."
 ## Documentation
 # docsVersion = "0.3"
 
 ## Open Graph
 images = ["logo.png"]
 ogLocale = "en_US"
-domainTLD = "www.adsb.lol"
-titleHome = "ADSB.lol"
+domainTLD = "www.decentrafly.org"
+titleHome = "Decentrafly.org"
 
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "adsblol"
-schemaAuthor = "katlol"
-schemaAuthorGitHub = "https://github.com/katlol"
+schemaName = "decentrafly"
+schemaAuthor = "john-d-fly"
+schemaAuthorGitHub = "https://github.com/john-d-fly"
 schemaLocale = "en-US"
 schemaLogo = "logo.png"
 schemaLogoWidth = 512
@@ -27,9 +27,9 @@ schemaLogoHeight = 512
 schemaImage = "logo.png"
 schemaImageWidth = 512
 schemaImageHeight = 512
-schemaTwitter = "https://twitter.com/adsblol"
+schemaTwitter = "https://twitter.com/decentrafly"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/adsblol"
+schemaGitHub = "https://github.com/john-d-fly"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -61,7 +61,7 @@ fillImage = "1270x740 Center" # normalize image size
 footer = ""
 
 # Feed
-copyRight = "Copyright (c) 2023 katlol"
+copyRight = "Copyright (c) 2025 Decentrafly, Inc."
 
 # Alert
 alert = false

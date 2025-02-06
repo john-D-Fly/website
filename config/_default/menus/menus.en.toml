@@ -1,7 +1,7 @@
 
 [[main]]
   name = "Live Map (Globe)"
-  url = "https://adsb.lol"
+  url = "https://globe.decentrafly.org"
   weight = 10
 
 [[main]]
